@@ -37,7 +37,7 @@ Berikut merupakan hasil pengerjaan soal 1B menggunakan RStudio.
 
    - **Soal 1C :** Bandingkan Hasil poin A dan B, apa kesimpulan yang bisa didapatkan?
 
-**Penyelesaian Soal 1C :** Setelah dilakukan percobaan, didapatkan hasil yang berbeda antara soal 1A dan 1B. Pada soal 1A, hasil yang muncul adalah **0.1024**, sedangkan pada soal 1B hasil yang muncul adalah **0.1045**.    
+**Penyelesaian Soal 1C :** Setelah dilakukan percobaan, didapatkan hasil yang berbeda antara soal 1A dan 1B. Pada soal 1A, hasil yang muncul adalah `0.1024`, sedangkan pada soal 1B hasil yang muncul adalah `0.1045`.    
 
-Perbedaan lain yang dapat dilihat adalah pada soal 1A, nilai yang muncul akan selalu tetap dan pada soal 1B, nilai yang muncul akan selalu berubah. Hal itu disebabkan karena pada soal 1A, nilai distribusi geometrik yang digunakan adalah tetap. Sebaliknya, pada soal 1B didapatkan hasil yang selalu berubah karena nilai tersebut dihasilkan dari rata - rata dari semua peluang yang dapat terjadi. Fungsi `rgeom()` yang digunakan pada soal 1B juga akan menghasilkan nilai peluang distribusi yang random 
+Perbedaan lain yang dapat dilihat adalah pada soal 1A, nilai yang muncul akan selalu tetap dan pada soal 1B, nilai yang muncul akan selalu berubah. Hal itu disebabkan karena pada soal 1A, nilai distribusi geometrik yang digunakan adalah tetap. Sebaliknya, pada soal 1B didapatkan hasil yang selalu berubah karena nilai tersebut dihasilkan dari rata - rata dari semua peluang yang dapat terjadi. Fungsi `rgeom()` yang digunakan pada soal 1B juga akan menghasilkan nilai peluang distribusi yang random\
 -- Link Gambar yang aku masih tidak tau cara memasukkannya --
