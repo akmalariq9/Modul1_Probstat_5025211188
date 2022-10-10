@@ -206,7 +206,7 @@ p
 Berikut merupakan hasil pengerjaan soal 4A menggunakan RStudio.
 ![4a](https://user-images.githubusercontent.com/109916703/194936293-11803597-6e9d-4b6c-9cc7-7c8b8b55ab87.png)
 - **Soal 4B : Histogram dari Distribusi Chi-Square dengan 100 data random.**
-  
+
 **Penyelesaian soal 4B :**\
 Dalam pembuatan Grafik Histogram Distribusi Chi-Square, digunakan fungsi `hist()`. Parameter yang digunakan adalah angka random dari fungsi distribusi Chi-Square itu sendiri. Berikut merupakan code yang digunakan untuk menyelesaikan soal 4B.
 ```R
