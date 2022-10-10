@@ -63,10 +63,12 @@ Soal 1E dapat diselesaikan menggunakan rumus mean dan varians. Setelah dilakukan
 
 ```R
 mean = 1 / p
+mean
 ```
 
 ```R
 variance = ( 1 - p ) / ( p^2 )
+variance
 ```
 Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
 ![1e](https://user-images.githubusercontent.com/109916703/194898733-381c377d-c593-40fe-9a52-9fcce12324bc.png)
@@ -77,7 +79,7 @@ Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
 - **Soal 2A : Peluang terdapat 4 pasien yang sembuh.**
   
 **Penyelesaian Soal 2A :**\
-Soal 2A dapat diselesaikan menggunakan cara Distribusi Binomial. Dalam RStudio, dapat dimanfaatkan fungsi `dbinom()` untuk menghitung hasil dari Distribusi Binomial tersebut. Dalam fungsi di bawah, `variabel n` menunjukkan data jumlah pasien, yaitu 20. Sedangkan `variabel p` menunjukkan peluang penderita covid19 bisa sembuh, yaitu 0.2. `variabel x` menunjukkan peluang yang dicari, yaitu 4. Setelah dilakukan perhitungan, didapatkan nilai **0.2181994**. Berikut adalah code yang digunakan dalam penyelesaian soal 2A
+Soal 2A dapat diselesaikan menggunakan cara Distribusi Binomial. Dalam RStudio, dapat dimanfaatkan fungsi `dbinom()` untuk menghitung hasil dari Distribusi Binomial tersebut. Dalam fungsi di bawah, `variabel n` menunjukkan data jumlah pasien, yaitu 20. Sedangkan `variabel p` menunjukkan peluang penderita covid19 bisa sembuh, yaitu 0.2. `variabel x` menunjukkan peluang yang dicari, yaitu 4. Setelah dilakukan perhitungan, didapatkan nilai **0.2181994**. Berikut adalah code yang digunakan dalam penyelesaian soal 2A.
 
 ```R
 n = 20
@@ -89,13 +91,30 @@ dbinom(x, n, p)
 Berikut merupakan hasil pengerjaan soal nomor 2A menggunakan RStudio.
 ![2a](https://user-images.githubusercontent.com/109916703/194903490-770fcf2d-a9b2-41ab-9547-adbad1f23ccb.png)
 
-- **Soal 2B : Gambarkan grafik histogram berdasarkan kasus tersebut**
+- **Soal 2B : Gambarkan grafik histogram berdasarkan kasus tersebut!**
 
 **Penyelesaian soal 2B :**\
-Sama seperti soal 1D, untuk membuat grafik histogram dapat digunakan fungsi `hist()`. Parameter yang digunakan merupakan angka random dari fungsi Distribusi Binomial itu sendiri. Berikut adalah code untuk menyelesaikan soal 2B
+Sama seperti soal 1D, untuk membuat grafik histogram dapat digunakan fungsi `hist()`. Parameter yang digunakan merupakan angka random dari fungsi Distribusi Binomial itu sendiri. Berikut adalah code untuk menyelesaikan soal 2B.
 
 ```R
-hist(rbinom(x, n, prob = p), xlab = "X", ylab = "Frekuensi", main = "Histogram of Binomial")
+hist(rbinom(x, n, prob = p), xlab = "x", ylab = "Frekuensi", main = "Grafik Histogram")
 ```
 Berikut merupakan Grafik Histogram yang dibuat menggunakan RStudio.
-![2b](https://user-images.githubusercontent.com/109916703/194921081-85813e00-ffab-44c9-8640-fcf961cc00be.png)
+![2b](https://user-images.githubusercontent.com/109916703/194922390-ace56bf0-47cb-4784-b7f3-cf983885f2ea.png)
+
+- **Soal 2C : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.**
+
+**Penyelesaian soal 2C :**\
+Dalam menyelesaikan soal 2C, dibutuhkan 2 rumus. Setelah melakukan perhitungan, didapatkan nilai rataan adalah **4** dan nilai varian adalah **3.2**. Berikut adalah code yang digunakan dalam menyelesaikan soal 2C.
+```R
+mean = sum (n * p)
+mean
+```
+
+```R
+variance = n * p * (1 - p)
+variance
+```
+Berikut merupakan hasil pengerjaan soal 2C menggunakan RStudio.
+![2C](https://user-images.githubusercontent.com/109916703/194924418-bc135156-7663-4fd2-825e-2cc0b44fdc0d.png)
+
