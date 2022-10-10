@@ -204,7 +204,8 @@ hist(rchisq(n, v), xlab = "X", ylab = "V", main = "Grafik Histogram Chi-Square")
 ```
 Berikut merupakan Grafik Histogram Distribusi Chi-Square yang dibuat menggunakan RStudio.
 ![4b](https://user-images.githubusercontent.com/109916703/194936370-188ac9bf-2b90-4db0-9499-c9105fcbb267.png)
-- **Soal 4C : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.**\
+- **Soal 4C : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.**
+
 **Penyelesaian soal 4C :**\
 Dalam distribusi Chi-Square, nilai rataan sama dengan nilai v. Sedangkan nilai varian sama dengan 2 kali nilai v. Sehingga dapat disimpulkan bahwa nilai rataan adalah **10** dan nilai varian ialah **20**. Berikut merupakan code yang digunakan untuk menyelesaikan soal 4C.
 ```R
