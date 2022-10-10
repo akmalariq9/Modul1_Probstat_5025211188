@@ -17,30 +17,35 @@ Soal 1A dapat diselesaikan menggunakan fungsi `dgeom()`. Setelah melakukan perhi
 ```R
 p = 0.2
 x = 3
+
 P <- dgeom(x, p)
 P
 ```
 
 Berikut merupakan hasil pengerjaan soal 1A menggunakan RStudio.
-![1a](https://user-images.githubusercontent.com/109916703/194874631-da8af077-bdbe-4a29-8238-e163647a0b33.png)
+![1a](https://user-images.githubusercontent.com/109916703/194931858-4f05541e-f0c2-40bc-bc80-40974c693ba1.png)
 
  - **Soal 1B : Mean Distribusi Geometrik dengan 10000 data random, prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( Distribusi Geometrik acak () == 3 )**
 
 **Penyelesaian Soal 1B :**\
-Soal 1B dapat diselesaikan menggunakan rumus mean serta parameter angka acak dari distribusi geometrik ( Sesuai soal ). Dalam menyelesaikan soal ini, digunakan fungsi `rgeom()`. Setelah dijalankan, hasil yang muncul nilainya selalu berubah. Dalam percobaan yang saya lakukan, salah satu angka yang muncul adalah **0.1045**.
+Soal 1B dapat diselesaikan menggunakan rumus mean serta parameter angka acak dari distribusi geometrik ( Sesuai soal ). Dalam menyelesaikan soal ini, digunakan fungsi `rgeom()`. Setelah dijalankan, hasil yang muncul nilainya selalu berubah. Dalam percobaan yang saya lakukan, salah satu angka yang muncul adalah **0.0748**.
 
 ```R
-mean(rgeom(n = 10000, prob = p) == 3)
+p = 0.2
+x = 3
+n = 10000
+
+mean(rgeom(n, prob = p) == x)
 ```
 
 Berikut merupakan hasil pengerjaan soal 1B menggunakan RStudio.
 
-![1b](https://user-images.githubusercontent.com/109916703/194887839-42178eaf-42c1-4917-95a2-be7a02d49f06.png)
+![1b](https://user-images.githubusercontent.com/109916703/194931948-b31c746d-c19e-460f-ac3d-4916f6bf7991.png)
 
    - **Soal 1C : Bandingkan Hasil poin A dan B, apa kesimpulan yang bisa didapatkan?**
 
 **Penyelesaian Soal 1C :**\
-Setelah dilakukan percobaan, didapatkan hasil yang berbeda antara soal 1A dan 1B. Pada soal 1A, hasil yang muncul adalah `0.1024`, sedangkan pada soal 1B hasil yang muncul adalah `0.1045`.    
+Setelah dilakukan percobaan, didapatkan hasil yang berbeda antara soal 1A dan 1B. Pada soal 1A, hasil yang muncul adalah `0.1024`, sedangkan pada soal 1B hasil yang muncul adalah `0.0748`.    
 
 Perbedaan lain yang dapat dilihat adalah pada soal 1A, nilai yang muncul akan selalu tetap dan pada soal 1B, nilai yang muncul akan selalu berubah. Hal itu disebabkan karena pada soal 1A, nilai distribusi geometrik yang digunakan adalah tetap. Sebaliknya, pada soal 1B didapatkan hasil yang selalu berubah karena nilai tersebut dihasilkan dari rata-rata dari semua peluang yang dapat terjadi. Fungsi `rgeom()` yang digunakan pada soal 1B juga akan menghasilkan nilai peluang distribusi yang random\
 
@@ -50,7 +55,10 @@ Perbedaan lain yang dapat dilihat adalah pada soal 1A, nilai yang muncul akan se
 Soal 1D dapat diselesaikan menggunakan fungsi `hist()` yang ada pada RStudio. Parameter yang digunakan ialah angka acak dari Fungsi Distribusi Geometrik. Berikut merupakan code yang digunakan dalam menyelesaikan soal 1D.
 
 ```R
+p = 0.2
+x = 3
 n = 10000
+
 hist(rgeom(n, prob = p), main = 'Histogram Distribusi Geometrik')
 ```
 Berikut merupakan Grafik Histogram Distribusi Geometrik yang dibuat menggunakan RStudio.
@@ -62,16 +70,18 @@ Berikut merupakan Grafik Histogram Distribusi Geometrik yang dibuat menggunakan 
 Soal 1E dapat diselesaikan menggunakan rumus mean dan varians. Setelah dilakukan perhitungan, didapatkan hasil nilai mean adalah **5** dan nilai varians adalah **20**. Berikut adalah code yang digunakan dalam menyelesaikan soal 1E.
 
 ```R
-mean = 1 / p
-mean
-```
+p = 0.2
+x = 3
+n = 10000
 
-```R
-variance = ( 1 - p ) / ( p^2 )
+mean = 1 / p
+variance = ( 1 - p ) / ( p ^ 2 )
+
+mean
 variance
 ```
 Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
-![1e](https://user-images.githubusercontent.com/109916703/194898733-381c377d-c593-40fe-9a52-9fcce12324bc.png)
+![1e](https://user-images.githubusercontent.com/109916703/194932119-ac064aba-2e0e-470c-ba7f-4d0d07655c84.png)
 
 ## Soal Nomor 2
 > Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
@@ -85,11 +95,12 @@ Soal 2A dapat diselesaikan menggunakan cara Distribusi Binomial. Dalam RStudio, 
 n = 20
 p = 0.2
 x = 4
+
 dbinom(x, n, p)
 ```
 
 Berikut merupakan hasil pengerjaan soal nomor 2A menggunakan RStudio.
-![2a](https://user-images.githubusercontent.com/109916703/194903490-770fcf2d-a9b2-41ab-9547-adbad1f23ccb.png)
+![2a](https://user-images.githubusercontent.com/109916703/194932783-b4af988a-7378-49ea-b5c0-e339b3c7ac5d.png)
 
 - **Soal 2B : Gambarkan grafik histogram berdasarkan kasus tersebut!**
 
@@ -97,6 +108,10 @@ Berikut merupakan hasil pengerjaan soal nomor 2A menggunakan RStudio.
 Sama seperti soal 1D, untuk membuat grafik histogram dapat digunakan fungsi `hist()`. Parameter yang digunakan merupakan angka random dari fungsi Distribusi Binomial itu sendiri. Berikut adalah code untuk menyelesaikan soal 2B.
 
 ```R
+n = 20
+p = 0.2
+x = 4
+
 hist(rbinom(x, n, prob = p), xlab = "x", ylab = "Frekuensi", main = "Grafik Histogram")
 ```
 Berikut merupakan Grafik Histogram yang dibuat menggunakan RStudio.
@@ -107,14 +122,66 @@ Berikut merupakan Grafik Histogram yang dibuat menggunakan RStudio.
 **Penyelesaian soal 2C :**\
 Dalam menyelesaikan soal 2C, dibutuhkan 2 rumus. Setelah melakukan perhitungan, didapatkan nilai rataan adalah **4** dan nilai varian adalah **3.2**. Berikut adalah code yang digunakan dalam menyelesaikan soal 2C.
 ```R
-mean = sum (n * p)
-mean
-```
+n = 20
+p = 0.2
+x = 4
 
-```R
+mean = sum (n * p)
 variance = n * p * (1 - p)
+
+mean
 variance
 ```
 Berikut merupakan hasil pengerjaan soal 2C menggunakan RStudio.
-![2C](https://user-images.githubusercontent.com/109916703/194924418-bc135156-7663-4fd2-825e-2cc0b44fdc0d.png)
+![2C](https://user-images.githubusercontent.com/109916703/194932871-bfc79f59-4f1c-4aa3-aa06-f832ef0583f6.png)
+
+## Soal Nomor 3
+> Diketahui data dari  sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari (gunakan Distribusi Poisson).
+- **Soal 3A : Berapa peluang bahwa 6 bayi akan lahir di rumah sakit ini besok?**
+
+**Penyelesaian soal 3A :**\
+Dalam menyelesaikan soal 3A, dapat digunakan fungsi `dpois()`. Parameter yang digunakan dalam fungsi tersebut ialah `variabel n` yang menunjukkan jumlah data bayi, dan `lambda` yang menunjukkan rata-rata historis kelahiran bayi. Setelah melakukan perhitungan, didapatkan nilai **0.1281201** sebagai hasilnya. Berikut adalah code yang digunakan untuk menyelesaikan soal 3A.
+```R
+n = 6
+lambda = 4.5
+
+prob = dpois(n, lambda)
+prob
+```
+
+Berikut merupakan hasil pengerjaan soal 3A menggunakan RStudio.
+![3a](https://user-images.githubusercontent.com/109916703/194929722-1c4d2f30-6aae-4d91-bf7f-adb1bdb0d448.png)
+
+- **Soal 3B : Simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini selama setahun (n = 365)**
+**Penyelesaian soal 3B :**\
+Dalam menyelesaikan soal 3B, digunakan fungsi `hist` untuk membuat grafiknya. Parameter yang digunakan merupakan angka random dari Distribusi Poisson itu sendiri. Berikut adalah code yang digunakan untuk menyelesaikan soal 3B.
+
+```R
+n = 6
+day = 365
+lambda = 4.5
+
+hist(rpois(day, lambda), main = "Grafik Histogram Poisson")
+```
+Berikut merupakan hasil pengerjaan soal 3B menggunakan RStudio.
+![3b](https://user-images.githubusercontent.com/109916703/194929803-60f9e2ac-9c8b-4c05-b89d-6be2c7e9735f.png)
+
+- **Soal 3C : Bandingkan hasil poin a dan b, Apa kesimpulan yang bisa didapatkan?**
+**Penyelesaian soal 3C :**\
+Kesimpulan yang dapat dilihat dari perbandingan soal 3A dan 3B ialah keduanya menghasilkan nilai yang cenderung sama. Dalam 1 tahun, akan memberikan nilai hasil yang hampir sama dengan estimasi kelahiran bayi di hari setelahnya.
+
+- **Soal 3D : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.**
+**Penyelesaian soal 3D :**\
+Karena soal nomor 3 menggunakan Distribusi Poisson, maka nilai rataan akan sama dengan nilai varian. Oleh karena itu, dapat disimpulkan bahwa nilai rataan dan varian adalah **4.5**. Berikut adalah code yang digunakan dalam menyelesaikan soal 3D.
+```R
+n = 6
+day = 365
+lambda = 4.5
+
+lambda = mean = variance
+mean
+variance
+```
+Berikut merupakan hasil pengerjaan soal 3D menggunakan RStudio.
+![3c](https://user-images.githubusercontent.com/109916703/194929877-86f056f4-4f3d-4300-b345-8ca7b1112b1c.png)
 
