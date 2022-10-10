@@ -70,3 +70,21 @@ variance = ( 1 - p ) / ( p^2 )
 ```
 Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
 ![1e](https://user-images.githubusercontent.com/109916703/194898733-381c377d-c593-40fe-9a52-9fcce12324bc.png)
+
+## Soal Nomor 2
+> Terdapat 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2. Tentukan :
+
+- **Soal 2A : Peluang terdapat 4 pasien yang sembuh.**
+  
+**Penyelesaian Soal 2A :**\
+Soal 2A dapat diselesaikan menggunakan cara Distribusi Binomial. Dalam RStudio, dapat dimanfaatkan fungsi `dbinom()` untuk menghitung hasil dari Distribusi Binomial tersebut. Dalam fungsi di bawah, `variabel n` menunjukkan data jumlah pasien, yaitu 20. Sedangkan `variabel p` menunjukkan peluang penderita covid19 bisa sembuh, yaitu 0.2. `variabel x` menunjukkan peluang yang dicari, yaitu 4. Berikut adalah code yang digunakan dalam penyelesaian soal 2A
+
+```R
+n = 20
+p = 0.2
+x = 4
+dbinom(x, n, p)
+```
+
+Berikut merupakan hasil pengerjaan soal nomor 2B menggunakan RStudio.
+![2a](https://user-images.githubusercontent.com/109916703/194903490-770fcf2d-a9b2-41ab-9547-adbad1f23ccb.png)
