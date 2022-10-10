@@ -77,7 +77,7 @@ Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
 - **Soal 2A : Peluang terdapat 4 pasien yang sembuh.**
   
 **Penyelesaian Soal 2A :**\
-Soal 2A dapat diselesaikan menggunakan cara Distribusi Binomial. Dalam RStudio, dapat dimanfaatkan fungsi `dbinom()` untuk menghitung hasil dari Distribusi Binomial tersebut. Dalam fungsi di bawah, `variabel n` menunjukkan data jumlah pasien, yaitu 20. Sedangkan `variabel p` menunjukkan peluang penderita covid19 bisa sembuh, yaitu 0.2. `variabel x` menunjukkan peluang yang dicari, yaitu 4. Berikut adalah code yang digunakan dalam penyelesaian soal 2A
+Soal 2A dapat diselesaikan menggunakan cara Distribusi Binomial. Dalam RStudio, dapat dimanfaatkan fungsi `dbinom()` untuk menghitung hasil dari Distribusi Binomial tersebut. Dalam fungsi di bawah, `variabel n` menunjukkan data jumlah pasien, yaitu 20. Sedangkan `variabel p` menunjukkan peluang penderita covid19 bisa sembuh, yaitu 0.2. `variabel x` menunjukkan peluang yang dicari, yaitu 4. Setelah dilakukan perhitungan, didapatkan nilai **0.2181994**. Berikut adalah code yang digunakan dalam penyelesaian soal 2A
 
 ```R
 n = 20
@@ -86,5 +86,16 @@ x = 4
 dbinom(x, n, p)
 ```
 
-Berikut merupakan hasil pengerjaan soal nomor 2B menggunakan RStudio.
+Berikut merupakan hasil pengerjaan soal nomor 2A menggunakan RStudio.
 ![2a](https://user-images.githubusercontent.com/109916703/194903490-770fcf2d-a9b2-41ab-9547-adbad1f23ccb.png)
+
+- **Soal 2B : Gambarkan grafik histogram berdasarkan kasus tersebut**
+
+**Penyelesaian soal 2B :**\
+Sama seperti soal 1D, untuk membuat grafik histogram dapat digunakan fungsi `hist()`. Parameter yang digunakan merupakan angka random dari fungsi Distribusi Binomial itu sendiri. Berikut adalah code untuk menyelesaikan soal 2B
+
+```R
+hist(rbinom(x, n, prob = p), xlab = "X", ylab = "Frekuensi", main = "Histogram of Binomial")
+```
+Berikut merupakan Grafik Histogram yang dibuat menggunakan RStudio.
+![2b](https://user-images.githubusercontent.com/109916703/194921081-85813e00-ffab-44c9-8640-fcf961cc00be.png)
