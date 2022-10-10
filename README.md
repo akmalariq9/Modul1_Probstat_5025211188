@@ -66,7 +66,7 @@ mean = 1 / p
 ```
 
 ```R
-variance = ( 1 - p ) / Testing <sub>subscript</sub> and <sup>superscript</sup>
+variance = ( 1 - p ) / ( p^2 )
 ```
 Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
 ![1e](https://user-images.githubusercontent.com/109916703/194898733-381c377d-c593-40fe-9a52-9fcce12324bc.png)
