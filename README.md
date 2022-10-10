@@ -9,7 +9,7 @@ Repository untuk pengerjaan Praktikum Modul 1 Probabilitas dan Statistika
 ## Soal Nomor 1
 > Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.
 > 
--  **Soal 1A : Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi? ( Distribusi Geometrik )**
+-  **Soal 1A : Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi? (Distribusi Geometrik)**
   
 **Penyelesaian Soal 1A :**\
 Soal 1A dapat diselesaikan menggunakan fungsi `dgeom()`. Setelah melakukan perhitungan, didapatkan peluang sebesar **0.1024**. Dalam fungsi di bawah, `variabel x` menunjukkan orang yang tidak hadir dalam acara vaksinasi, dan `variabel p` merupakan parameter yang menunjukkan peluang kehadiran orang dalam acara vaksinasi. Berikut merupakan code yang digunakan untuk mengerjakan soal 1A.
@@ -25,10 +25,10 @@ P
 Berikut merupakan hasil pengerjaan soal 1A menggunakan RStudio.
 ![1a](https://user-images.githubusercontent.com/109916703/194931858-4f05541e-f0c2-40bc-bc80-40974c693ba1.png)
 
- - **Soal 1B : Mean Distribusi Geometrik dengan 10000 data random, prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( Distribusi Geometrik acak () == 3 )**
+ - **Soal 1B : Mean Distribusi Geometrik dengan 10000 data random, prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 (Distribusi Geometrik acak () == 3)**
 
 **Penyelesaian Soal 1B :**\
-Soal 1B dapat diselesaikan menggunakan rumus mean serta parameter angka acak dari distribusi geometrik ( Sesuai soal ). Dalam menyelesaikan soal ini, digunakan fungsi `rgeom()`. Setelah dijalankan, hasil yang muncul nilainya selalu berubah. Dalam percobaan yang saya lakukan, salah satu angka yang muncul adalah **0.0748**.
+Soal 1B dapat diselesaikan menggunakan rumus mean serta parameter angka acak dari distribusi geometrik (Sesuai soal). Dalam menyelesaikan soal ini, digunakan fungsi `rgeom()`. Setelah dijalankan, hasil yang muncul nilainya selalu berubah. Dalam percobaan yang saya lakukan, salah satu angka yang muncul adalah **0.0748**.
 
 ```R
 p = 0.2
@@ -99,7 +99,7 @@ x = 4
 dbinom(x, n, p)
 ```
 
-Berikut merupakan hasil pengerjaan soal nomor 2A menggunakan RStudio.
+Berikut merupakan hasil pengerjaan soal 2A menggunakan RStudio.
 ![2a](https://user-images.githubusercontent.com/109916703/194932783-b4af988a-7378-49ea-b5c0-e339b3c7ac5d.png)
 
 - **Soal 2B : Gambarkan grafik histogram berdasarkan kasus tersebut!**
@@ -185,3 +185,47 @@ variance
 Berikut merupakan hasil pengerjaan soal 3D menggunakan RStudio.
 ![3c](https://user-images.githubusercontent.com/109916703/194929877-86f056f4-4f3d-4300-b345-8ca7b1112b1c.png)
 
+## Soal Nomor 4
+> Diketahui nilai x = 2 dan v = 10. Tentukan :
+- **Soal 4A : Fungsi Probabilitas dari Distribusi Chi-Square.**
+  **Penyelesaian soal 4A :**\
+Untuk menyelesaikan soal 4A, digunakan fungsi `dchisq()`. Parameter yang digunakan dalam fungsi tersebut ialah `variabel x` dan `variabel v`. Setelah melakukan perhitungan, didapatkan hasil **0.007664155**. Berikut adalah code yang digunakan untuk menyelesaikan soal 4A.
+
+```R
+x = 2
+v = 10
+n = 100
+
+p = dchisq(x, 10)
+p
+```
+Berikut merupakan hasil pengerjaan soal 4A menggunakan RStudio.
+![4a](https://user-images.githubusercontent.com/109916703/194936293-11803597-6e9d-4b6c-9cc7-7c8b8b55ab87.png)
+- **Soal 4B : Histogram dari Distribusi Chi-Square dengan 100 data random.**
+**Penyelesaian soal 4B :**\
+Dalam pembuatan Grafik Histogram Distribusi Chi-Square, digunakan fungsi `hist()`. Parameter yang digunakan adalah angka random dari fungsi distribusi Chi-Square itu sendiri. Berikut merupakan code yang digunakan untuk menyelesaikan soal 4B.
+```R
+x = 2
+v = 10
+n = 100
+
+hist(rchisq(n, v), xlab = "X", ylab = "V", main = "Grafik Histogram Chi-Square")
+```
+Berikut merupakan Grafik Histogram Distribusi Chi-Square yang dibuat menggunakan RStudio.
+![4b](https://user-images.githubusercontent.com/109916703/194936370-188ac9bf-2b90-4db0-9499-c9105fcbb267.png)
+- **Soal 4C : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.**
+**Penyelesaian soal 4C :**\
+Dalam distribusi Chi-Square, nilai rataan sama dengan nilai v. Sedangkan nilai varian sama dengan 2 kali nilai v. Sehingga dapat disimpulkan bahwa nilai rataan adalah **10** dan nilai varian ialah **20**. Berikut merupakan code yang digunakan untuk menyelesaikan soal 4C.
+```R
+x = 2
+v = 10
+n = 100
+
+mean = v
+variance = 2 * v
+
+mean
+variance
+```
+Berikut merupakan hasil pengerjaan soal 4C menggunakan RStudio.
+![4c](https://user-images.githubusercontent.com/109916703/194936492-a68035e3-2d36-4e0b-be84-d17124a64e05.png)
