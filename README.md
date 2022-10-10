@@ -12,7 +12,7 @@ Repository untuk pengerjaan Praktikum Modul 1 Probabilitas dan Statistika
 -  **Soal 1A : Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi? ( Distribusi Geometrik )**
   
 **Penyelesaian Soal 1A :**\
-Diselesaikan menggunakan fungsi `dgeom()`. Setelah melakukan perhitungan, didapatkan peluang sebesar **0.1024**. Dalam fungsi dibawah, `variabel x` menunjukkan orang yang tidak hadir dalam acara vaksinasi, dan `variabel p` merupakan parameter yang menunjukkan peluang kehadiran orang dalam acara vaksinasi. Berikut merupakan code yang digunakan untuk mengerjakan soal 1A.
+Soal 1A dapat diselesaikan menggunakan fungsi `dgeom()`. Setelah melakukan perhitungan, didapatkan peluang sebesar **0.1024**. Dalam fungsi dibawah, `variabel x` menunjukkan orang yang tidak hadir dalam acara vaksinasi, dan `variabel p` merupakan parameter yang menunjukkan peluang kehadiran orang dalam acara vaksinasi. Berikut merupakan code yang digunakan untuk mengerjakan soal 1A.
 
 ```R
 p = 0.2
@@ -55,3 +55,18 @@ hist(rgeom(n, prob = p), main = 'Histogram Distribusi Geometrik')
 ```
 Berikut merupakan Grafik Histogram Distribusi Geometrik yang dibuat menggunakan RStudio.
 ![1d](https://user-images.githubusercontent.com/109916703/194894072-49415203-368b-41c4-8df2-caa0921b683c.png)
+
+- **Soal 1E : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.**
+
+**Penyelesaian Soal 1E :**\
+Soal 1E dapat diselesaikan menggunakan rumus mean dan varians. Setelah dilakukan perhitungan, didapatkan hasil nilai mean adalah **5** dan nilai varians adalah **20**. Berikut adalah code yang digunakan dalam menyelesaikan soal 1E.
+
+```R
+mean = 1 / p
+```
+
+```R
+variance = ( 1 - p ) / ( p<sup>2</sup>)
+```
+Berikut merupakan  hasil pengerjaan soal 1E menggunakan aplikasi RStudio.
+![1e](https://user-images.githubusercontent.com/109916703/194898733-381c377d-c593-40fe-9a52-9fcce12324bc.png)
