@@ -11,7 +11,7 @@ Repository untuk pengerjaan Praktikum Modul 1 Probabilitas dan Statistika
 -  **Soal 1a** : Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? ( Distribusi Geometrik )
   
 **Soal 1a** 
-> Diselesaikan menggunakan fungsi dgeom(). Setelah melakukan perhitungan, didapatkan peluang sebesar 0.1024. Dalam fungsi dibawah, variabel x menunjukkan orang yang tidak hadir dalam acara vaksinasi, dan variabel p merupakan parameter yang menunjukkan peluang kehadiran orang dalam acara vaksinasi. Berikut merupakan code yang digunakan untuk mengerjakan soal 1a.
+Diselesaikan menggunakan fungsi dgeom(). Setelah melakukan perhitungan, didapatkan peluang sebesar 0.1024. Dalam fungsi dibawah, variabel x menunjukkan orang yang tidak hadir dalam acara vaksinasi, dan variabel p merupakan parameter yang menunjukkan peluang kehadiran orang dalam acara vaksinasi. Berikut merupakan code yang digunakan untuk mengerjakan soal 1a.
 
 ```R
 p = 0.2
