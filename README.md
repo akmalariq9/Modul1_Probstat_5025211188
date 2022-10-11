@@ -288,4 +288,75 @@ variance
 ```
 Berikut merupakan hasil pengerjaan soal 5C menggunakan RStudio.
 ![5c](https://user-images.githubusercontent.com/109916703/194984047-34851541-686b-4501-be7a-114b455419ff.png)
+## Soal Nomor 6
+> Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
+
+- **Soal 6A : Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).** 
+
+**Penyelesaian Soal 6A :**
+Dalam menyelesaikan soal 6A, digunakan fungsi `rnorm()` untuk mencari z-score. Kemudian dicari nilai `x1` dan `x2` yang nantinya digunakan untuk membuat plot grafik. Selain itu, digunakan fungsi `plot` dalam pembuatan grafik, sesuai dengan petunjuk soal. Berikut adalah code yang digunakan dalam menyelesaikan soal 6A.
+```R
+n = 100
+mean = 50
+sd = 8
+
+set.seed(1)
+data <- rnorm(n, mean, sd)
+data
+summary(data)
+
+x1 = runif(1, min = min(data), max = mean)
+x2 = runif(1, min = mean, max = max(data))
+p1 <- pnorm(x1, mean, sd)
+p2 <- pnorm(x2, mean, sd)
+
+x1
+x2
+p1
+p2
+
+pfinal <- p1 - p2
+plot(data)
+```
+Berikut merupakan hasil pengerjaan soal 6A menggunakan RStudio.
+![6a1](https://user-images.githubusercontent.com/109916703/195036917-70af6989-b9ea-492d-a0cd-9f930964a620.png)
+Berikut merupakan grafik yang yang dibuat menggunakan RStudio.
+![6a2](https://user-images.githubusercontent.com/109916703/195037296-3c3f4217-fcd5-432d-8156-78fa1c3639a7.png)
+
+- **Soal 6B : Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan NRP_Nama_Probstat_{Nama Kelas}_DNhistogram.**
+
+**Penyelesaian Soal 6B :**
+Dalam penyelesaian soal 6B, digunakan fungsi `hist` seperti soal-soal sebelumnya. Kemudian terdapat parameter data dan breaks yang digunakan dalam fungsi tersebut. Berikut adalah code yang digunakan dalam menyelesaikan soal 6B.
+```R
+n = 100
+mean = 50
+sd = 8
+breaks = 50
+
+hist(data, breaks, main = "5025211188_Akmal Ariq Romadhon_Probstat_A_DNhistogram")
+```
+Berikut adalah Grafik Histogram Distribusi Normal yang dibuat menggunakan Rstudio.
+![6b](https://user-images.githubusercontent.com/109916703/195037466-58599947-9957-411c-a8ea-3b637d7b4920.png)
+
+- **Soal 6C : Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.**
+
+**Penyelesaian Soal 6C :**
+Dalam menyelesaikan soal 6C, rumus yang digunakan ialah kuadrat dari standar deviasi. Berikut adalah code yang digunakan dalam menyelesaikan soal 6C. Setelah melakukan perhitungan, didapatkan nilai **51.63277** sebagai hasilnya.
+```R
+n = 100
+mean = 50
+sd = 8
+breaks = 50
+
+variance = (sd(data)) ^ 2
+variance
+```
+Berikut merupakan hasil pengerjaan soal 6C menggunakan RStudio.
+![6c](https://user-images.githubusercontent.com/109916703/195037731-c3d87d6c-740a-4ebe-ba10-93b1323f1193.png)
+
+## End Of The Line
+> Terima Kasih!
+
+
+
 
