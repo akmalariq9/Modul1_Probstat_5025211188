@@ -355,8 +355,9 @@ Berikut merupakan hasil pengerjaan soal 6C menggunakan RStudio.
 ![6c](https://user-images.githubusercontent.com/109916703/195037731-c3d87d6c-740a-4ebe-ba10-93b1323f1193.png)
 
 ## End Of The Line
-> Terima Kasih!
-
-
-
-
+```c
+#include <stdio.h>
+int main(){
+    printf("Thank You!);
+}
+```
