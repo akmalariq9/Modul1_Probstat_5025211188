@@ -49,7 +49,7 @@ Setelah dilakukan percobaan, didapatkan hasil yang berbeda antara soal 1A dan 1B
 
 Perbedaan lain yang dapat dilihat adalah pada soal 1A, nilai yang muncul akan selalu tetap dan pada soal 1B, nilai yang muncul akan selalu berubah. Hal itu disebabkan karena pada soal 1A, nilai distribusi geometrik yang digunakan adalah tetap. Sebaliknya, pada soal 1B didapatkan hasil yang selalu berubah karena nilai tersebut dihasilkan dari rata-rata dari semua peluang yang dapat terjadi. Fungsi `rgeom()` yang digunakan pada soal 1B juga akan menghasilkan nilai peluang distribusi yang random\
 
-- **Soal 1D : Histogram Distribusi Geometrik , Peluang X = 3 gagal Sebelum Sukses Pertama**
+- **Soal 1D : Histogram Distribusi Geometrik, peluang X = 3 gagal Sebelum Sukses Pertama**
   
 **Penyelesaian Soal 1D :**\
 Soal 1D dapat diselesaikan menggunakan fungsi `hist()` yang ada pada RStudio. Parameter yang digunakan ialah angka acak dari Fungsi Distribusi Geometrik. Berikut merupakan code yang digunakan dalam menyelesaikan soal 1D.
