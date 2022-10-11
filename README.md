@@ -191,8 +191,8 @@ Berikut merupakan hasil pengerjaan soal 3D menggunakan RStudio.
 ## Soal Nomor 4
 > Diketahui nilai x = 2 dan v = 10. Tentukan :
 - **Soal 4A : Fungsi Probabilitas dari Distribusi Chi-Square.**
-  
-  **Penyelesaian soal 4A :**\
+
+**Penyelesaian soal 4A :**\
 Untuk menyelesaikan soal 4A, digunakan fungsi `dchisq()`. Parameter yang digunakan dalam fungsi tersebut ialah `variabel x` dan `variabel v`. Setelah melakukan perhitungan, didapatkan hasil **0.007664155**. Berikut adalah code yang digunakan untuk menyelesaikan soal 4A.
 
 ```R
@@ -235,3 +235,57 @@ variance
 ```
 Berikut merupakan hasil pengerjaan soal 4C menggunakan RStudio.
 ![4c](https://user-images.githubusercontent.com/109916703/194936492-a68035e3-2d36-4e0b-be84-d17124a64e05.png)
+
+## Soal Nomor 5
+> Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
+- **Soal 5A : Fungsi Probabilitas dari Distribusi Exponensial.**
+
+**Penyelesaian soal 5A :**\
+Dalam menyelesaikan soal 5A, dapat digunakan fungsi `dexp`. Parameter yang digunakan dalam fungsi tersebut adalah `rate atau lambda` dan `jumlah data` yang ada. Setelah dilakukan perhitungan, didapatkan nilai **0.1493612** sebagai hasilnya. Berikut adalah code yang digunakan dalam menyelesaikan soal 5A.
+```R
+lambda = 3
+
+
+p = dexp(1, rate = 3, log = FALSE)
+p
+```
+Berikut merupakan hasil pengerjaan soal 5A menggunakan RStudio.
+![5a](https://user-images.githubusercontent.com/109916703/194983694-43e43fa4-1491-4ca5-adea-93dd2602ac2a.png)
+
+- **Soal 5B : Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random.**
+
+**Penyelesaian soal 5B :**\
+Dalam menyelesaikan soal 5B, digunakan kembali fungsi `hist` untuk pembuatan grafik histogram. Kemudian parameter yang digunakan ialah variasi pada jumlah data, yaitu 10,100,1000, dan 10000. Parameter lain yang digunakan ialah angka random yang dihasilkan dari fungsi Distribusi Eksponensial itu sendiri. Berikut adalah code yang digunakan dalam menyelesaikan soal 5B.
+```R
+lambda = 3
+n = 100
+
+hist(rexp(10, rate = 3), main = "Grafik Histogram Untuk 10 Bilangan Randomm")
+hist(rexp(100, rate = 3), main = "Grafik Histogram Untuk 100 Bilangan Randomm")
+hist(rexp(1000, rate = 3), main = "Grafik Histogram Untuk 1000 Bilangan Randomm")
+hist(rexp(10000, rate = 3), main = "Grafik Histogram Untuk 10000 Bilangan Randomm")
+```
+Berikut merupakan Grafik Distribusi Eksponensial yang dibuat menggunakan RStudio.
+![5b1](https://user-images.githubusercontent.com/109916703/194983750-6e5b237a-bcf3-445b-84f3-3ba815c12ff3.png)
+![5b2](https://user-images.githubusercontent.com/109916703/194983779-e23af4e9-1227-4bcf-806b-0bf742791111.png)
+![5b3](https://user-images.githubusercontent.com/109916703/194983901-18cfeab8-d8e3-410b-896b-61afb118c666.png)
+![5b4](https://user-images.githubusercontent.com/109916703/194983999-300fece3-395a-44d6-a2f7-6e90fec61d7c.png)
+
+- **Soal 5C : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3**
+
+**Penyelesaian soal 5C :**\
+Dalam menyelesaikan soal 5C, digunakan bantuan `set.seed(1)` sesuai yang diberikan pada soal. Setelah dilakukan perhitungan, didapatkan nilai mean adalah **0.3435588** dan nilai varian adalah **0.06560765**. Berikut merupakan code yang digunakan dalam menyelesaikan soal 5C.
+```R
+lambda = 3
+n = 100
+
+set.seed(1)
+mean = mean(rexp(n, rate = 3))
+variance = (sd(rexp(n, rate = lambda))) ^ 2
+
+mean
+variance
+```
+Berikut merupakan hasil pengerjaan soal 5C menggunakan RStudio.
+![5c](https://user-images.githubusercontent.com/109916703/194984047-34851541-686b-4501-be7a-114b455419ff.png)
+
