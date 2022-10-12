@@ -2,9 +2,10 @@
 Repository untuk pengerjaan Praktikum Modul 1 Probabilitas dan Statistika
 
 ## Identitas
-| Nama                      | NRP        |
-|---------------------------|------------|
-| Akmal Ariq Romadhon       | 5025211188 |
+
+**Akmal Ariq Romadhon**\
+**5025211188**\
+**Probabilitas dan Statistik ( A )**
 
 ## Soal Nomor 1
 > Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu dengan seseorang yang menghadiri acara vaksinasi sebelumnya.
@@ -126,14 +127,14 @@ n = 20
 p = 0.2
 x = 4
 
-mean = sum (n * p)
+mean = n * (p)
 variance = n * p * (1 - p)
 
 mean
 variance
 ```
 Berikut merupakan hasil pengerjaan soal 2C menggunakan RStudio.
-![2C](https://user-images.githubusercontent.com/109916703/194932871-bfc79f59-4f1c-4aa3-aa06-f832ef0583f6.png)
+![2C](https://user-images.githubusercontent.com/109916703/195337746-2ce88e01-bba3-4721-8572-e025c6e5c612.png)
 
 ## Soal Nomor 3
 > Diketahui data dari  sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari (gunakan Distribusi Poisson).
@@ -170,7 +171,9 @@ Berikut merupakan hasil pengerjaan soal 3B menggunakan RStudio.
 - **Soal 3C : Bandingkan hasil poin a dan b, Apa kesimpulan yang bisa didapatkan?**
   
 **Penyelesaian soal 3C :**\
-Kesimpulan yang dapat dilihat dari perbandingan soal 3A dan 3B ialah keduanya menghasilkan nilai yang cenderung sama. Dalam 1 tahun, akan memberikan nilai hasil yang hampir sama dengan estimasi kelahiran bayi di hari setelahnya.
+Kesimpulan yang dapat dilihat dari perbandingan soal 3A dan 3B ialah keduanya menghasilkan nilai yang berbeda. Pada soal 3A, perhitungan hanya dapat digunakan untuk mencari peluang dalam 1 hari. Selain itu, dalam soal 3A, digunakan fungsi `dpois` sehingga akan menghasilkan peluang berdasarkan fungsi dari Distribusi Geometrik yang menyebabkan hasilnya selalu sama.
+
+Pada soal 3B, perhitungan dilakukan untuk mencari peluang selamaa 1 tahun. fungsi yang digunakan adalah `rpois()` sehingga akan menghasilkan peluang berdasarkan eksperimen random. Oleh karena itu, grafik yang dihasilkan pada soal 3B akan selalu berubah. Pada soal 1B, nilai yang didapatkan akan mendekati dengan nilai pada soal 1A * 365 hari.
 
 - **Soal 3D : Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson.**
   
@@ -294,34 +297,32 @@ Berikut merupakan hasil pengerjaan soal 5C menggunakan RStudio.
 - **Soal 6A : Fungsi Probabilitas dari Distribusi Normal P(X1 ≤ x ≤ X2), hitung Z-Score Nya dan plot data generate randomnya dalam bentuk grafik. Petunjuk(gunakan fungsi plot()).** 
 
 **Penyelesaian Soal 6A :**
-Dalam menyelesaikan soal 6A, digunakan fungsi `rnorm()` untuk mencari z-score. Kemudian dicari nilai `x1` dan `x2` yang nantinya digunakan untuk membuat plot grafik. Selain itu, digunakan fungsi `plot` dalam pembuatan grafik, sesuai dengan petunjuk soal. Berikut adalah code yang digunakan dalam menyelesaikan soal 6A.
+Dalam menyelesaikan soal 6A, digunakan fungsi `dnorm()`. Selain itu, nilai z-score dapat dicari menggunakan rumus $z=\frac{x - mean}{sd}$. Kemudian dicari nilai `x1` dan `x2` yang nantinya digunakan untuk membuat plot grafik. Selain itu, digunakan fungsi `plot` dalam pembuatan grafik, sesuai dengan petunjuk soal. Berikut adalah code yang digunakan dalam menyelesaikan soal 6A.
 ```R
 n = 100
 mean = 50
 sd = 8
 
 set.seed(1)
-data <- rnorm(n, mean, sd)
-data
-summary(data)
+P = dnorm(x = n, mean, sd)
+data = rnorm(n, mean, sd)
+m = mean(data)
 
-x1 = runif(1, min = min(data), max = mean)
-x2 = runif(1, min = mean, max = max(data))
-p1 <- pnorm(x1, mean, sd)
-p2 <- pnorm(x2, mean, sd)
+x1 = floor(m)
+x2 = ceiling(m)
 
-x1
-x2
-p1
-p2
+z1 = (x1 - mean) / sd(data)
+z2 = (x2 - mean) / sd(data)
 
-pfinal <- p1 - p2
+P
+z1
+z2
 plot(data)
 ```
 Berikut merupakan hasil pengerjaan soal 6A menggunakan RStudio.
-![6a1](https://user-images.githubusercontent.com/109916703/195036917-70af6989-b9ea-492d-a0cd-9f930964a620.png)
+![6a1](https://user-images.githubusercontent.com/109916703/195338209-78c047c6-2545-4a06-b114-8bef50b18c8b.png)
 Berikut merupakan grafik yang yang dibuat menggunakan RStudio.
-![6a2](https://user-images.githubusercontent.com/109916703/195037296-3c3f4217-fcd5-432d-8156-78fa1c3639a7.png)
+![6a2](https://user-images.githubusercontent.com/109916703/195338302-008c1c66-b376-4aed-ba46-3c1035f823b1.png)
 
 - **Soal 6B : Generate Histogram dari Distribusi Normal dengan breaks 50 dan format penamaan NRP_Nama_Probstat_{Nama Kelas}_DNhistogram.**
 
@@ -341,14 +342,16 @@ Berikut adalah Grafik Histogram Distribusi Normal yang dibuat menggunakan Rstudi
 - **Soal 6C : Nilai Varian (σ²) dari hasil generate random nilai Distribusi Normal.**
 
 **Penyelesaian Soal 6C :**
-Dalam menyelesaikan soal 6C, rumus yang digunakan ialah kuadrat dari standar deviasi. Berikut adalah code yang digunakan dalam menyelesaikan soal 6C. Setelah melakukan perhitungan, didapatkan nilai **51.63277** sebagai hasilnya.
+Dalam menyelesaikan soal 6C, dapat digunakan rumus `var` dengan nilai `n = 100`. Selain itu digunakan juga nilai `mean` dan `sd` sebagai parameternya. Setelah melakukan perhitungan, didapatkan nilai **51.63277** sebagai hasilnya. Berikut adalah code yang digunakan dalam menyelesaikan soal 6C.
 ```R
 n = 100
 mean = 50
 sd = 8
 breaks = 50
 
-variance = (sd(data)) ^ 2
+set.seed(1)
+variance = var(rnorm(n, mean, sd))
+
 variance
 ```
 Berikut merupakan hasil pengerjaan soal 6C menggunakan RStudio.

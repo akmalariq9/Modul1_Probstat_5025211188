@@ -36,7 +36,7 @@ dbinom(x, n, p)
 hist(rbinom(x, n, prob = p), xlab = "x", ylab = "Frekuensi", main = "Grafik Histogram")
 
 #2C
-mean = sum (n * p)
+mean = n * (p)
 variance = n * p * (1 - p)
 
 mean
@@ -115,27 +115,32 @@ sd = 8
 breaks = 50
 
 #6A
+n = 100
+mean = 50
+breaks = 50
+sd = 8
+
 set.seed(1)
-data <- rnorm(n, mean, sd)
-data
-summary(data)
+P = dnorm(x = n, mean, sd)
+data = rnorm(n, mean, sd)
+m = mean(data)
 
-x1 = runif(1, min = min(data), max = mean)
-x2 = runif(1, min = mean, max = max(data))
-p1 <- pnorm(x1, mean, sd)
-p2 <- pnorm(x2, mean, sd)
+x1 = floor(m)
+x2 = ceiling(m)
 
-x1
-x2
-p1
-p2
+z1 = (x1 - mean) / sd(data)
+z2 = (x2 - mean) / sd(data)
 
-pfinal <- p1 - p2
+P
+z1
+z2
 plot(data)
 
 #6B
 hist(data, breaks, main = "5025211188_Akmal Ariq Romadhon_Probstat_A_DNhistogram")
 
 #6C
-variance = (sd(data)) ^ 2
+set.seed(1)
+variance = var(rnorm(n, mean, sd))
+
 variance
